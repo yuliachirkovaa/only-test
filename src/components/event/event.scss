@@ -1,0 +1,47 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.event {
+
+  &__container {
+
+    display: flex;
+    flex-direction: column;
+    gap: $apx-m-15;
+    margin-right: $apx-m-25;
+
+    @include desktop { 
+      
+      gap: $apx-15; 
+      margin-right: $apx-80;
+    
+    }
+
+  }
+
+  &__year {
+
+    color: var(--color-blue);
+    font-family: Bebas Neue, Arial, sans-serif;
+    font-size: $apx-m-16;
+
+    @include desktop { font-size: $apx-25; }
+
+  }
+
+  &__text {
+
+    color: var(--color-text);
+    font-size: $apx-m-14;
+    line-height: 1.5;
+
+    @include desktop { 
+      
+      max-width: $apx-320;
+      font-size: $apx-20; 
+    
+    }
+
+  }
+
+}

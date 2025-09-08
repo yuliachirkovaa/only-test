@@ -1,0 +1,63 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.period-dates {
+
+  &__container {
+
+    display: flex;
+    flex-direction: column;
+    gap: $apx-m-65;
+    margin-bottom: $apx-m-20;
+
+    @include desktop { 
+      
+      gap: $apx-100;
+      margin-bottom: $apx-137;
+      font-size: $apx-200; 
+    
+    }
+
+  }
+
+  &__dates {
+
+    display: flex;
+    gap: $apx-m-30;
+    font-weight: 700;
+    font-size: $apx-m-56;
+    letter-spacing: -$apx-m-1;
+
+    @include desktop { 
+      
+      max-width: calc(100% - $apx-480);
+      justify-content: center;
+      gap: $apx-100;
+      font-size: $apx-200;
+      letter-spacing: -$apx-1; 
+    
+    }
+
+  }
+
+  &__start { 
+    
+    color: var(--color-blue); 
+
+    @include desktop { color: var(--color-violet); }
+  
+  }
+
+  &__end { color: var(--color-pink); }
+
+  &__line {
+
+    width: 86%;
+    height: $apx-m-1;
+    background-color: var(--color-grey);
+
+    @include desktop { display: none; }
+
+  }
+
+}

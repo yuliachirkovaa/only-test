@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url('./fonts/PTSans-Regular.eot');
+  src: local('PTSans'), local('PTSans-Regular'),
+      url('./fonts/PTSans-Regular.woff2') format('woff2'),
+      url('./fonts/PTSans-Regular.woff') format('woff'),
+      url('./fonts/PTSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('./fonts/PTSans-Bold.eot');
+  src: local('PTSans Bold'), local('PTSans-Bold'),
+      url('./fonts/PTSans-Bold.woff2') format('woff2'),
+      url('./fonts/PTSans-Bold.woff') format('woff'),
+      url('./fonts/PTSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/BebasNeue-Regular.eot');
+  src: local('BebasNeue'), local('BebasNeue-Regular'),
+      url('./fonts/BebasNeue-Regular.woff2') format('woff2'),
+      url('./fonts/BebasNeue-Regular.woff') format('woff'),
+      url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+

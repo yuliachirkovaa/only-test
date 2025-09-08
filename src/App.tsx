@@ -1,13 +1,19 @@
 import { FC } from "react";
-import Container from "./components/container";
 import HistoryBlock from "./components/history";
+import PeriodProvider from "./context/period.context/provider";
 
 const App: FC = () => {
+
   return (
-    <Container>
+
+    <PeriodProvider>
+
       <HistoryBlock />
-    </Container>
+      
+    </PeriodProvider>
+
   );
+  
 }
 
 export default App;

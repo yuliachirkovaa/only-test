@@ -1,0 +1,80 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.swiper {
+
+  height: $apx-m-225;
+
+  @include desktop { 
+    
+    height: auto; 
+    width: 78% !important;
+    margin-left: 0 !important;
+  
+  }
+
+}
+
+.swiper-slide-next {
+
+  opacity: 0.4;
+
+  @include desktop { opacity: 1; }
+
+}
+
+.swiper-pagination {
+
+  left: -$apx-m-20 !important;
+
+  @include desktop { display: none !important; }
+
+}
+
+.swiper-pagination-bullet {
+
+  margin: 0 $apx-m-5 !important;
+  width: $apx-m-6 !important;
+  height: $apx-m-6 !important;
+  background: var(--color-text) !important;
+  opacity: 0.4 !important;
+
+  &:last-child { display: none !important; }
+
+}
+
+.swiper-pagination-bullet-active {
+
+  background: var(--color-text) !important;
+  opacity: 1 !important;
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+
+  display: none !important;
+  width: $apx-40 !important;
+  height: $apx-40 !important;
+
+  &::after {
+
+    display: block;
+    width: $apx-40 !important;
+    height: $apx-40 !important;
+    font-size: $apx-40 !important;
+    font-weight: 700 !important;
+    color: var(--color-blue) !important;
+
+  }
+
+  @include desktop { display: block !important; }
+
+}
+
+.swiper-button-prev {
+
+  top: 10% !important;
+  left: -10% !important;
+
+}

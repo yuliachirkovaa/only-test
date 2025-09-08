@@ -1,0 +1,99 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.history {
+
+  &__container { 
+    
+    position: relative;
+    padding: $apx-m-59 $apx-m-27 $apx-m-59 $apx-m-20; 
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include desktop { padding: 0 $apx-160 0 $apx-320; }
+  
+  }
+
+  &__wrapper {
+
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include desktop { padding: $apx-170 0 $apx-104 $apx-80; }
+
+  }
+
+  &__title {
+
+    margin-bottom: $apx-m-56;
+    max-width: $apx-m-125;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: $apx-m-20;
+    line-height: 1.2;
+
+    @include desktop { 
+      
+      margin-bottom: $apx-96;
+      max-width: $apx-355;
+      font-size: $apx-56; 
+    
+    }
+
+  }
+  
+}
+
+.slider-btn {
+
+  position: absolute;
+  display: none;
+  padding: 0;
+  width: $apx-40;
+  height: $apx-40;
+  border: none;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(56, 119, 238, 0.1);
+  opacity: 1;
+  z-index: 20;
+
+  @include desktop { 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+  }
+
+  svg {
+
+    @include desktop { 
+      
+      width: $apx-8;
+      height: $apx-12;
+    
+    }
+
+  }
+
+  &:disabled { display: none; }
+
+  &--prev {
+
+    transform: rotate(180deg);
+    top: $apx-984;
+    left: $apx-338;
+
+  }
+
+  &--next {
+
+    top: $apx-984;
+    left: $apx-1705;
+
+  }
+
+}

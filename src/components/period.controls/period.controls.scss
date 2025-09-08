@@ -1,0 +1,99 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.period-controls {
+
+  &__container {
+
+    position: absolute;
+    left: $apx-m-20;
+    bottom: $apx-m-45;
+    display: flex;
+    flex-direction: column;
+    gap: $apx-m-11;
+
+    @include desktop { 
+      
+      position: static;
+      gap: $apx-20; 
+      margin-bottom: $apx-56;
+    
+    }
+
+  }
+
+  &__current {
+
+    color: var(--color-text);
+    font-size: $apx-m-14;
+
+    @include desktop { font-size: $apx-14; }
+
+  }
+
+  &__btns {
+
+    display: flex;
+    gap: $apx-m-8;
+
+    @include desktop { gap: $apx-20; }
+
+  }
+
+  &__btn {
+
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+
+      width: $apx-m-25;
+      height: $apx-m-25;
+
+      @include desktop { 
+        
+        width: $apx-50;
+        height: $apx-50; 
+      
+      }
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      background-color: white;
+
+    }
+
+    &:disabled { 
+      
+      opacity: 0.5; 
+      background-color: transparent;
+    
+    }
+
+    &--desk { 
+      
+      display: none; 
+
+      @include desktop { display: block; }
+    
+    }
+
+    &--mob {
+
+      @include desktop { display: none; }
+
+    }
+
+    &--next { transform: rotate(180deg); }
+
+  }
+
+}
