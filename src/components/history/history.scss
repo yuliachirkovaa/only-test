@@ -28,6 +28,7 @@
 
   &__title {
 
+    position: relative;
     margin-bottom: $apx-m-56;
     max-width: $apx-m-125;
     color: var(--color-text);
@@ -40,6 +41,18 @@
       margin-bottom: $apx-494;
       max-width: $apx-355;
       font-size: $apx-56; 
+
+      &::after {
+
+        content: '';
+        position: absolute;
+        width: $apx-4;
+        height: $apx-120;
+        top: $apx-10;
+        left: -$apx-80;
+        background: linear-gradient(to top, var(--color-pink), var(--color-blue));
+
+      }
     
     }
 

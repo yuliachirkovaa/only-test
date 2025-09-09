@@ -35,7 +35,7 @@
     font-size: $apx-20;
     font-weight: 700;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
   }
 
@@ -63,7 +63,8 @@
 
     &--active {
 
-      .circle__name { opacity: 1; }
+      .circle__name:not(:empty) { opacity: 1; }
+      .circle__name:empty { opacity: 0; }
 
     }
 
