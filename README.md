@@ -13,7 +13,12 @@
 - SCSS 
 - Swiper 
 - gsap 
+- Webpack
  
 **Как запустить проект:**  
 - npm install 
-- npm run start 
+- npm start 
+ИЛИ 
+- npm install 
+- npm run build
+- npm start 
