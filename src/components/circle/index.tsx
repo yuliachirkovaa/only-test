@@ -20,7 +20,7 @@ const Circle: FC = () => {
   const activePointSize = 56;
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [showName, setShowName] = useState(true);
+  const [showName, setShowName] = useState<boolean>(true);
 
   const pointsRef = useRef<HTMLDivElement>(null);
 

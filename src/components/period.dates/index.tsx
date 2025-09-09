@@ -18,8 +18,8 @@ const PeriodDates: FC<PeriodDatesProps> = ({ className }) => {
   const start = MockData[period - 1].start;
   const end = MockData[period - 1].end;
 
-  const [animatedStart, setAnimatedStart] = useState(start);
-  const [animatedEnd, setAnimatedEnd] = useState(end);
+  const [animatedStart, setAnimatedStart] = useState<number>(start);
+  const [animatedEnd, setAnimatedEnd] = useState<number>(end);
 
   useEffect(() => {
     if (animatedStart !== start) {
@@ -41,7 +41,7 @@ const PeriodDates: FC<PeriodDatesProps> = ({ className }) => {
       gsap.to({ val: animatedEnd }, {
         val: end,
         duration: 1,
-        ease: "power1.out",
+        ease: "power2.inOut",
         onUpdate: function() {
           setAnimatedEnd(Math.round(this.targets()[0].val));
         }

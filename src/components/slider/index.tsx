@@ -22,7 +22,7 @@ const Slider: FC = () => {
 
   const { period } = context;
 
-  const [currentPeriod, setCurrentPeriod] = useState(period);
+  const [currentPeriod, setCurrentPeriod] = useState<number>(period);
   const [events, setEvents] = useState(MockData[period - 1].items);
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
