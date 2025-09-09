@@ -3,7 +3,13 @@ import PeriodContext from "../../context/period.context/context";
 import { MockData } from "../../constants/mock.data";
 import "./period.dates.scss";
 
-const PeriodDates: FC = () => {
+interface PeriodDatesProps {
+
+  className?: string;
+  
+}
+
+const PeriodDates: FC<PeriodDatesProps> = ({ className }) => {
 
   const context = useContext(PeriodContext);
 
@@ -17,7 +23,7 @@ const PeriodDates: FC = () => {
 
   return (
 
-    <div className = "period-dates__container">
+    <div className = {` ${className} period-dates__container `}>
 
       <div className = "period-dates__dates">
 

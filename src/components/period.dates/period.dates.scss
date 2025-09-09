@@ -12,9 +12,10 @@
 
     @include desktop { 
       
-      gap: $apx-100;
-      margin-bottom: $apx-137;
-      font-size: $apx-200; 
+      position: absolute;
+      top: $apx-150;
+      left: -$apx-240;
+      margin-bottom: 0;
     
     }
 
@@ -30,8 +31,6 @@
 
     @include desktop { 
       
-      max-width: calc(100% - $apx-480);
-      justify-content: center;
       gap: $apx-100;
       font-size: $apx-200;
       letter-spacing: -$apx-1; 

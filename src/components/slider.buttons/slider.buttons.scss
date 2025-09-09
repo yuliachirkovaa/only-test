@@ -1,0 +1,50 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.slider-btn {
+
+  position: absolute;
+  display: none;
+  padding: 0;
+  width: $apx-40;
+  height: $apx-40;
+  border: none;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(56, 119, 238, 0.1);
+  opacity: 1;
+  z-index: 20;
+
+  @include desktop { 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+  }
+
+  svg {
+      
+    width: $apx-8;
+    height: $apx-12;
+
+  }
+
+  &:disabled { display: none; }
+
+  &--prev {
+
+    transform: rotate(180deg);
+    top: $apx-984;
+    left: $apx-338;
+
+  }
+
+  &--next {
+
+    top: $apx-984;
+    left: $apx-1705;
+
+  }
+
+}

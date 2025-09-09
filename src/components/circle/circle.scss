@@ -1,0 +1,74 @@
+@import "../../styles/apx.scss";
+@import "../../styles/mixins.scss";
+
+.circle {
+
+  display: none;
+  position: absolute;
+  top: $apx-250;
+  left: $apx-810;
+  width: $apx-540;
+  height: $apx-540;
+  border: $apx-1 solid rgba(66, 86, 122, 0.2);
+  border-radius: 100%;
+  z-index: 1;
+
+  @include desktop { display: block; }
+
+  &__dates { z-index: 2; }
+
+  &__number {
+
+    color: var(--color-text);
+    font-size: $apx-20;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  &__name {
+
+    position: absolute;
+    top: $apx-15;
+    left: $apx-75;
+    color: var(--color-text);
+    font-size: $apx-20;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  &__point {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: $apx-1 solid var(--color-text);
+    border-radius: 100%;
+    background-color: var(--color-text);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &--active {
+
+      border-color: rgba(66, 86, 122, 0.2);
+      background-color: var(--color-bg);
+
+      .circle__number { opacity: 1; }
+
+    }
+
+    &--active {
+
+      .circle__name { opacity: 1; }
+
+    }
+
+  }
+
+  
+
+}
