@@ -26,7 +26,7 @@ const Slider: FC = () => {
   const [events, setEvents] = useState(MockData[period - 1].items);
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const updateSlider = () => setIsMobile( window.innerWidth < 1025 );
+  const updateSlider = () => setIsMobile( window.innerWidth < 769 );
 
 	useEffect(() => {
 
