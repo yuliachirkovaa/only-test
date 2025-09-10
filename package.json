@@ -2,6 +2,7 @@
   "name": "only-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yuliachirkovaa.github.io/only-test/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -17,7 +18,9 @@
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.ts",
-    "build": "webpack --config webpack.config.ts"
+    "build": "webpack --config webpack.config.ts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
     "@types/react-dom": "^19.1.9",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.4",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
