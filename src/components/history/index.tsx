@@ -9,7 +9,7 @@ import "./history.scss";
 
 const HistoryBlock: FC = () => {
 
-  const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
   useEffect(() => {
 
@@ -22,10 +22,6 @@ const HistoryBlock: FC = () => {
         setIsModalOpened(false);
       }
     };
-
-    if (mql.matches) {
-      setIsModalOpened(true);
-    }
 
     mql.addEventListener("change", onChange);
 
